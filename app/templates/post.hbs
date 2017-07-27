@@ -1,0 +1,33 @@
+<p>
+  {{#link-to 'posts'}}posts{{/link-to}}
+</p>
+
+<p>
+  <button {{action 'addStuff'}}>Do Stuff</button>
+</p>
+
+<p>
+  <button {{action 'addStuffWithDelay'}}>Do Stuff with Delay</button>
+</p>
+
+
+<h2>Comments</h2>
+<ul>
+{{#each model.comments as |comment index|}}
+  <li>{{index}}</li>
+{{/each}}
+</ul>
+
+<h2>Messages</h2>
+<ul>
+{{#each model.messages as |message index|}}
+  <li>{{index}}</li>
+{{/each}}
+</ul>
+
+<h2>Comments and Messages</h2>
+<ul>
+{{#each commentsAndMessages as |commentOrMessage index|}}
+  <li>{{index}}</li>
+{{/each}}
+</ul>
